@@ -37,7 +37,7 @@ for game_round in range(rounds):
             winner="tie"
             phrase="It is a tie, how boring."
         elif p_choice=="paper" and c_choice=="rock":
-            winnter="player"
+            winner="player"
             phrase="Paper covers rock."
         elif p_choice=="scissors" and c_choice=="rock":
             winner="computer"
@@ -57,7 +57,7 @@ for game_round in range(rounds):
             winner="player"
             phrase="Rock smashes scissors."
         elif p_choice=="paper" and c_choice=="scissors":
-            winnter="computer"
+            winner="computer"
             phrase="Scissors cut paper."
         elif p_choice=="scissors" and c_choice=="scissors":
             winner="tie"
@@ -71,10 +71,10 @@ for game_round in range(rounds):
 
         print("\t"+ phrase)
         if winner=="player":
-            print("tYou win round "+str(game_round+1)+".")
+            print("\tYou win round "+str(game_round+1)+".")
             p_score+=1
         elif winner=="computer":
-            print("tComputer wins round "+str(game_round+1)+".")
+            print("\tComputer wins round "+str(game_round+1)+".")
             c_score+=1
         else:
             print("\tThis round was a tie.")
@@ -84,6 +84,20 @@ for game_round in range(rounds):
          print("That is not a valid game option.")
          print("Computer gets the point!")
          c_score+=1
+         
+#Game has ended, print results
+print("\nFinal Game Results")
+print("\tRounds Played: "+str(rounds))
+print("\tPlayer score: "+str(p_score))
+print("\tComputer score: "+str(c_score))
+if p_score>c_score:
+    print("\tWinner: PLAYER!!!")
+elif c_score>p_score:
+    print("\tWinner: Computer :(")
+else:
+    print("\tThe game was a tie.")
+    
+
 
 
     
