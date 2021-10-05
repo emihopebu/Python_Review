@@ -17,6 +17,12 @@ print(2//4)#returns integer
 
 print(5%4)#returns remainder 1
 
+#math functions
+print(round(3.1))
+print(round(3.9))
+
+print(abs(-20))
+
 
 
 
