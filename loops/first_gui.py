@@ -1,4 +1,9 @@
 #first gui exercise
+#clean code
+#readability
+#predictability
+#DRY
+
 
 picture=[
     [0,0,0,1,0,0,0],
@@ -8,11 +13,13 @@ picture=[
     [0,0,0,1,0,0,0],
     [0,0,0,1,0,0,0],
     ]
+fill="*"
+empty=" "
 for line in picture:
     for num in line:
-        if num==0:
-            print(" ", end="")
+        if num:
+            print(fill, end="")
         else:
-            print("*", end="")
+            print(empty, end="")
     print("")
     
