@@ -14,5 +14,5 @@ for line in picture:
             print(" ", end="")
         else:
             print("*", end="")
-    print("\n")
+    print("")
     
