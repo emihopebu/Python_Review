@@ -3,9 +3,9 @@
 class BigObject: #Class
     #code
     pass
-obj1=BigObject() #instanciate
-obj2=BigObject() #instanciate
-obj3=BigObject() #instanciate
+obj1=BigObject() #instantiate
+obj2=BigObject() #instantiate
+obj3=BigObject() #instantiate
 print(type(obj1))
 
 print(type(None))
