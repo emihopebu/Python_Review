@@ -1,15 +1,27 @@
 #encapsulation
+#Using OOP in Python, we can restrict access to methods and variables.
+#This prevents data from direct modification which is called encapsulation. In Python,
+#we denote private attributes using underscore as the prefix i.e single _ or double __.
 
-class PlayerCharacter:
-    def __init__(self, name, age):
-        self.name=name
-        self.age=age
+class Computer:
 
-    def run(self):
-        print("run")
-    def speak(self):
-        print(f"My name is {self.name}. I am {self.age} years old.")
+    def __init__(self):
+        self.__maxprice = 900
 
-player1=PlayerCharacter("Emi",200)
-player1.speak()
+    def sell(self):
+        print("Selling Price: {}".format(self.__maxprice))
+
+    def setMaxPrice(self, price):
+        self.__maxprice = price
+
+c = Computer()
+c.sell()
+
+# change the price
+c.__maxprice = 1000
+c.sell()
+
+# using setter function
+c.setMaxPrice(1000)
+c.sell()
         
