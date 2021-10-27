@@ -2,7 +2,7 @@
 
 #users: wizards, archers, ogres
 
-class User:
+class User(object):
     def sign_in(self):
         print("Logged in")
 
@@ -26,4 +26,13 @@ wizard1=Wizard("Merlin", 50)
 archer1=Archer("Robin", 100)
 wizard1.attack()
 archer1.attack()
+
+print(isinstance(wizard1, Wizard))
+
+print(isinstance(wizard1, User))
+
+print(isinstance(wizard1, object))
+
+
+
 
